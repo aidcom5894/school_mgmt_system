@@ -21,7 +21,7 @@ include('./master_page/ui_master_navbar.php');
 <div class="row">
 <div class="col-7">
 <div class="banner-content">
-<span class="subtitle" data-sal="slide-up" data-sal-duration="1000">Welcome to EduBlink</span>
+<span class="subtitle" data-sal="slide-up" data-sal-duration="1000">Welcome to Aadamya</span>
 <h1 class="title" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">World Best Program Best University</h1>
 <p data-sal-delay="200" data-sal="slide-up" data-sal-duration="1000">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p>
 <div class="banner-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
