@@ -63,13 +63,23 @@ aria-expanded="false">
 <h5 class="item-title"><?php echo $_SESSION['instituteName']; ?></h5>
 <span><?php echo $_SESSION['loginID']; ?></span>
 </div>
+<?php 
+$instituteName = $_SESSION['instituteName'];
+$fetchDetails = mysqli_query("SELECT admin_role FROM institute_registration WHERE institute_name='$instituteName'");
+while($row = mysqli_fetch_array($fetchDetails))
+{
+	$admin_role = $row['admin_role'];
+	echo $admin_role;
+}
+
+?>
 <div class="admin-img">
 <img src="<?php echo $base_url;?>modules/dashboard/img/figure/admin.jpg" alt="Admin">
 </div>
 </a>
 <div class="dropdown-menu dropdown-menu-right">
 <div class="item-header">
-<h6 class="item-title">Steven Zone</h6>
+<h6 class="item-title"><?php echo $row['admin_role']; ?></h6>
 </div>
 <div class="item-content">
 <ul class="settings-list">

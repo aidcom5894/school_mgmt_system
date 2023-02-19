@@ -28,8 +28,8 @@ include('../configuration/db_configuration.php');
 </div>
 <h3>Authorised Login Portal for Admin</h3>
 <div class="btn-section clearfix">
-<a href="login.html" class="link-btn active btn-1 active-bg">Login</a>
-<a href="register.html" class="link-btn btn-2 default-bg">Register</a>
+<a href="<?php echo $base_url; ?>onboarding/login_platform" class="link-btn active btn-1 default-bg">Login</a>
+<a href="<?php echo $base_url;?>onboarding/admin_registration" class="link-btn btn-2  active-bg">Register</a>
 </div>
 <div class="login-inner-form">
 
@@ -37,11 +37,11 @@ include('../configuration/db_configuration.php');
 <form action="#" method="POST">
 
 <div class="form-group form-box clearfix">
-<input name="institute_name" id="loginName" type="text" class="form-control" placeholder="Institute Name" aria-label="Institute Name" autocomplete="off" required=""  oninput="changetoTitle()"> 
+<input name="institute_name" id="loginName" type="text" class="form-control" placeholder="Institute Name" aria-label="Institute Name" autocomplete="off" required="" oninput="changetoTitle()"> 
 </div>
 
 <div class="form-group form-box clearfix">
-<input name="instLoginID" type="text" id="newLoginID" class="form-control" placeholder="Institute Login ID" aria-label="Institute Login" autocomplete="off" required="" oninput="changetoUpper()"> 
+<input name="instLoginID" type="text" id="newLoginID" class="form-control" placeholder="Institute Login ID" aria-label="Institute Login" autocomplete="off" required="" oninput="changetoUpper()" maxlength="12"> 
 </div>
 
 
@@ -57,22 +57,6 @@ include('../configuration/db_configuration.php');
 </form>
 </div>
 
-<script type="text/javascript">
-	function changetoTitle()
-	{
-		var authorisedName = document.getElementById('loginName');
-
-		authorisedName.value = authorisedName.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1);});
-	}
-
-	function changetoUpper()
-	{
-		var changeText = document.getElementById('newLoginID');
-		changeText.value = changeText.value.toUpperCase();
-	}
-</script>
-
-
 <?php 
 if(isset($_POST['dashboardLogin']))
 {
@@ -80,17 +64,17 @@ if(isset($_POST['dashboardLogin']))
 	$instituteLogin = $_POST['instLoginID'];
 	$institutePassword = $_POST['password'];
 
-	$matchDetails = mysqli_query($config,"SELECT institute_name,login_id,password FROM institute_registration WHERE institute_name='$instituteName' AND login_id='$instituteLogin' AND password='$institutePassword' ");
+	$matchDetails = mysqli_query($config,"SELECT institute_name,login_id,password FROM institute_registration WHERE institute_name='$instituteName' AND login_id='$instituteLogin' AND password='$institutePassword'");
 
 	if(mysqli_num_rows($matchDetails)>0)
 	{
 		session_start();
+
 		$_SESSION['instituteName'] = $instituteName;
 		$_SESSION['loginID'] = $instituteLogin;
 
-		
-		
 		header("location:admin_dashboard");
+			
 	}
 	else
 	{
@@ -109,12 +93,7 @@ if(isset($_POST['dashboardLogin']))
 	}
 }
 
-
-
-
 ?>
-
-
 
 <ul class="form-control">
 <!-- <li><a href="#" class="facebook-color"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li> -->
@@ -132,10 +111,21 @@ if(isset($_POST['dashboardLogin']))
 </div>
 <!-- Login 13 end -->
 
+<script type="text/javascript">
+	function changetoTitle()
+	{
+		var authorisedName = document.getElementById('loginName');
+		
+		authorisedName.value = authorisedName.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1);});
 
+	}
 
-
-
+	function changetoUpper()
+	{
+		var loginID = document.getElementById('newLoginID');
+		loginID.value = loginID.value.toUpperCase();
+	}
+</script>
 
 <?php 
 

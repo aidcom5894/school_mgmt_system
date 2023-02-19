@@ -97,6 +97,9 @@ if(isset($_POST['register']))
 
 	$userAvatar = $savedAddress.$profilePic[array_rand($profilePic,1)];
 
+	// handling images for registration
+	
+
 	$insertData = "INSERT INTO institute_registration(institute_name,admin_name,admin_role,hod_contact,login_id,password,inst_reg_id,institute_email,institute_address,admin_profile_pic) VALUES('$instName','$adminName','$admin_role','$adminContact','$instLoginId','$adminPassword','$instRegId','$instEmail','$instAddress','$userAvatar')";
 
 	$checkName = mysqli_query($config,"SELECT institute_name FROM institute_registration WHERE institute_name='$instName'");
