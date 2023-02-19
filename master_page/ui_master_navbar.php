@@ -21,7 +21,7 @@ include('../configuration/base_address.php');
 </div>
 <div class="header-top-right">
 <ul class="header-info">
-<li><a href="#">Login</a></li>
+<li><a href="<?php echo $base_url;?>onboarding/login_platform">Login</a></li>
 <li><a href="<?php echo $base_url;?>onboarding/admin_registration">Register</a></li>
 <li class="header-btn"><a href="#" class="edu-btn btn-secondary btn-medium">Apply Now <i class="icon-4"></i></a></li>
 </ul>

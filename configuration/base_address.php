@@ -1,5 +1,5 @@
 <?php 
 
-$base_url = "https://www.aadamya.in/";
+$base_url = "http://localhost/school_mgmt_system/";
 
 ?>

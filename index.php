@@ -2,6 +2,7 @@
 
 include('./master_page/ui_master_header.php');
 include('./master_page/ui_master_navbar.php');
+include('./configuration/db_configuration.php');
 
 ?>
 

@@ -1,6 +1,7 @@
 <?php 
 
 include('../master_page/onboarding_header.php');
+include('../configuration/db_configuration.php');
 
 ?>
 
@@ -25,40 +26,103 @@ include('../master_page/onboarding_header.php');
 <img src="<?php echo $base_url;?>modules/onboarding/assets/img/logos/logo.png" alt="logo">
 </a>
 </div>
-<h3>Sign Into Your Account</h3>
+<h3>Authorised Login Portal for Admin</h3>
 <div class="btn-section clearfix">
-<a href="<?php echo $base_url; ?>onboarding/admin_login" class="link-btn active btn-1 active-bg">Login</a>
-<a href="<?php echo $base_url; ?>onboarding/admin_registration" class="link-btn btn-2 default-bg">Register</a>
+<a href="login.html" class="link-btn active btn-1 active-bg">Login</a>
+<a href="register.html" class="link-btn btn-2 default-bg">Register</a>
 </div>
 <div class="login-inner-form">
-<form action="#" method="GET">
+
+
+<form action="#" method="POST">
+
 <div class="form-group form-box clearfix">
-<input name="email" type="email" class="form-control" placeholder="Email Address" aria-label="Email Address">
- 
+<input name="institute_name" id="loginName" type="text" class="form-control" placeholder="Institute Name" aria-label="Institute Name" autocomplete="off" required=""  oninput="changetoTitle()"> 
 </div>
+
 <div class="form-group form-box clearfix">
-<input name="password" type="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
+<input name="instLoginID" type="text" id="newLoginID" class="form-control" placeholder="Institute Login ID" aria-label="Institute Login" autocomplete="off" required="" oninput="changetoUpper()"> 
+</div>
+
+
+<div class="form-group form-box clearfix">
+<input name="password" type="password" class="form-control" autocomplete="off" required="" placeholder="Password" aria-label="Password">
 
 </div>
-<div class="checkbox form-group clearfix">
-<div class="form-check float-start">
-<input class="form-check-input" type="checkbox" id="rememberme">
-<label class="form-check-label" for="rememberme">
-Remember me
-</label>
-</div>
-<a href="forgot-password-13.html" class="link-light float-end forgot-password">Forgot password?</a>
-</div>
+
 <div class="form-group">
-<button type="submit" class="btn btn-primary btn-lg btn-theme">Login</button>
+<button type="submit" name="dashboardLogin" class="btn btn-primary btn-lg btn-theme">Login</button>
 </div>
+
 </form>
 </div>
-<ul class="social-list">
-<li><a href="#" class="facebook-color"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
-<li><a href="#" class="twitter-color"><i class="fa fa-twitter twitter-i"></i><span>Twitter</span></a></li>
-<li><a href="#" class="google-color"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
+
+<script type="text/javascript">
+	function changetoTitle()
+	{
+		var authorisedName = document.getElementById('loginName');
+
+		authorisedName.value = authorisedName.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1);});
+	}
+
+	function changetoUpper()
+	{
+		var changeText = document.getElementById('newLoginID');
+		changeText.value = changeText.value.toUpperCase();
+	}
+</script>
+
+
+<?php 
+if(isset($_POST['dashboardLogin']))
+{
+	$instituteName = $_POST['institute_name'];
+	$instituteLogin = $_POST['instLoginID'];
+	$institutePassword = $_POST['password'];
+
+	$matchDetails = mysqli_query($config,"SELECT institute_name,login_id,password FROM institute_registration WHERE institute_name='$instituteName' AND login_id='$instituteLogin' AND password='$institutePassword' ");
+
+	if(mysqli_num_rows($matchDetails)>0)
+	{
+		session_start();
+		$_SESSION['instituteName'] = $instituteName;
+		$_SESSION['loginID'] = $instituteLogin;
+
+		
+		
+		header("location:admin_dashboard");
+	}
+	else
+	{
+		echo "<svg xmlns='http://www.w3.org/2000/svg' style='display: none;'>";
+		echo "<symbol id='exclamation-triangle-fill' fill='currentColor' viewBox='0 0 16 16'>";
+		echo "<path d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/>";
+		echo "</symbol>";
+		echo "</svg>";
+		echo "<div class='alert alert-danger d-flex align-items-center' role='alert'>";
+		echo "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Danger:'><use xlink:href='#exclamation-triangle-fill'/></svg>";
+		echo "<div>";
+		echo "No match Found for the provided Data <a href='admin_login' class='alert-link'><br><strong> Relogin Here</strong></a>";
+		echo "</div>";
+		echo "</div>";
+
+	}
+}
+
+
+
+
+?>
+
+
+
+<ul class="form-control">
+<!-- <li><a href="#" class="facebook-color"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li> -->
+<li><a href="#" class="btn btn-primary btn-lg btn-theme"><i class="fa fa-home home-i"></i><span> Home</span></a></li>
+<!-- <li><a href="#" class="google-color"><i class="fa fa-google google-i"></i><span>Google</span></a></li> -->
 </ul>
+
+
 <p class="none-2">Don't have an account? <a href="register-13.html" class="thembo"> Register here</a></p>
 </div>
 </div>
@@ -69,7 +133,12 @@ Remember me
 <!-- Login 13 end -->
 
 
+
+
+
+
 <?php 
 
 include('../master_page/onboarding_footer.php');
+
 ?>
