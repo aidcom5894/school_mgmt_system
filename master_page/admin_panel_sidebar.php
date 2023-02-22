@@ -14,23 +14,36 @@ include('../configuration/base_address.php');
 <div class="sidebar-menu-content">
 <ul class="nav nav-sidebar-menu sidebar-toggle-view">
 <li class="nav-item sidebar-nav-item">
-<a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
+<a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>My Dashboard</span></a>
 <ul class="nav sub-group-menu">
+
 <li class="nav-item">
-<a href="index.html" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
+<a href="" class="nav-link"><i class="fas fa-angle-right"></i>Manage Profile</a>
 </li>
+
 <li class="nav-item">
-<a href="index3.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Students</a>
+<a href="" class="nav-link"><i
+class="fas fa-angle-right"></i>Password Management</a>
 </li>
+
 <li class="nav-item">
-<a href="index4.html" class="nav-link"><i class="fas fa-angle-right"></i>Parents</a>
+<a href="" class="nav-link"><i class="fas fa-angle-right"></i>Priority Tasks</a>
 </li>
+
 <li class="nav-item">
 <a href="index5.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Teachers</a>
+class="fas fa-angle-right"></i>View Community</a>
 </li>
+
+<li class="nav-item">
+<a href="index5.html" class="nav-link"><i
+class="fas fa-angle-right"></i>View Complete Profile</a>
+</li>
+
+
+
 </ul>
+
 </li>
 <li class="nav-item sidebar-nav-item">
 <a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
