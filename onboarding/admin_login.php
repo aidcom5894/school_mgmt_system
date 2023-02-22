@@ -2,6 +2,7 @@
 
 include('../master_page/onboarding_header.php');
 include('../configuration/db_configuration.php');
+include('../configuration/base_address.php');
 
 ?>
 
@@ -97,7 +98,7 @@ if(isset($_POST['dashboardLogin']))
 
 <ul class="form-control">
 <!-- <li><a href="#" class="facebook-color"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li> -->
-<li><a href="#" class="btn btn-primary btn-lg btn-theme"><i class="fa fa-home home-i"></i><span> Home</span></a></li>
+<li><a href="<?php echo $base_url; ?>" class="btn btn-primary btn-lg btn-theme"><i class="fa fa-home home-i"></i><span> Home</span></a></li>
 <!-- <li><a href="#" class="google-color"><i class="fa fa-google google-i"></i><span>Google</span></a></li> -->
 </ul>
 

@@ -1,5 +1,7 @@
 <?php 
 include('../configuration/base_address.php');
+include('../configuration/db_configuration.php');
+
 session_start();
 
 	if(!isset($_SESSION['instituteName']))
@@ -55,31 +57,36 @@ session_start();
 </div>
 </li>
 </ul>
+
+<?php 
+
+$fetchDetails = mysqli_query($config,"SELECT * FROM institute_registration WHERE institute_name='{$_SESSION['instituteName']}'");
+while($row = mysqli_fetch_assoc($fetchDetails))
+{
+	$username = $row['institute_name'];
+	$loginID = $row['login_id'];
+	$adminRole = $row['admin_role'];
+	$profile = $row['admin_profile_pic'];
+}
+
+?>
+
 <ul class="navbar-nav">
 <li class="navbar-item dropdown header-admin">
 <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
 aria-expanded="false">
 <div class="admin-title">
-<h5 class="item-title"><?php echo $_SESSION['instituteName']; ?></h5>
-<span><?php echo $_SESSION['loginID']; ?></span>
+<h5 class="item-title"><?php echo $username; ?></h5>
+<span><?php echo $loginID; ?></span>
 </div>
-<?php 
-$instituteName = $_SESSION['instituteName'];
-$fetchDetails = mysqli_query("SELECT admin_role FROM institute_registration WHERE institute_name='$instituteName'");
-while($row = mysqli_fetch_array($fetchDetails))
-{
-	$admin_role = $row['admin_role'];
-	echo $admin_role;
-}
 
-?>
 <div class="admin-img">
-<img src="<?php echo $base_url;?>modules/dashboard/img/figure/admin.jpg" alt="Admin">
+<img src="<?php echo $profile; ?>" alt="Admin" style="width:45px; height:45px;">
 </div>
 </a>
 <div class="dropdown-menu dropdown-menu-right">
 <div class="item-header">
-<h6 class="item-title"><?php echo $row['admin_role']; ?></h6>
+<h5 class="item-title"><?php echo $adminRole; ?></h5>
 </div>
 <div class="item-content">
 <ul class="settings-list">
