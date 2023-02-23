@@ -1,16 +1,3 @@
-<?php 
-include('../configuration/base_address.php');
-include('../configuration/db_configuration.php');
-
-session_start();
-
-	if(!isset($_SESSION['instituteName']))
-	{
-		echo "<script>alert('You need to Login First to access the Dashboard')</script>";
-		header("location:admin_login");
-	}
-?>
-
 <!-- Preloader Start Here -->
 <div id="preloader"></div>
 <!-- Preloader End Here -->
@@ -20,7 +7,7 @@ session_start();
 <div class="nav-bar-header-one">
 <div class="header-logo">
 <a href="index.html">
-<img src="<?php echo $base_url;?>modules/dashboard/img/logo.png" alt="logo">
+<img src="<?php echo $base_url; ?>modules/dashboard/img/logo.png" alt="logo">
 </a>
 </div>
 
@@ -34,8 +21,9 @@ session_start();
 </span>
 </button>
 </div>
-
 </div>
+
+
 <div class="d-md-none mobile-nav-bar">
 <button class="navbar-toggler pulse-animation" type="button" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false">
 <i class="far fa-arrow-alt-circle-down"></i>
@@ -57,44 +45,29 @@ session_start();
 </div>
 </li>
 </ul>
-
-<?php 
-
-$fetchDetails = mysqli_query($config,"SELECT * FROM institute_registration WHERE institute_name='{$_SESSION['instituteName']}'");
-while($row = mysqli_fetch_assoc($fetchDetails))
-{
-	$username = $row['institute_name'];
-	$loginID = $row['login_id'];
-	$adminRole = $row['admin_role'];
-	$profile = $row['admin_profile_pic'];
-}
-
-?>
-
 <ul class="navbar-nav">
 <li class="navbar-item dropdown header-admin">
 <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
 aria-expanded="false">
 <div class="admin-title">
-<h5 class="item-title"><?php echo $username; ?></h5>
-<span><?php echo $loginID; ?></span>
+<h5 class="item-title">Stevne Zone</h5>
+<span>Admin</span>
 </div>
-
 <div class="admin-img">
-<img src="<?php echo $profile; ?>" alt="Admin" style="width:45px; height:45px;">
+<img src="img/figure/admin.jpg" alt="Admin">
 </div>
 </a>
 <div class="dropdown-menu dropdown-menu-right">
 <div class="item-header">
-<h5 class="item-title"><?php echo $adminRole; ?></h5>
+<h6 class="item-title">Steven Zone</h6>
 </div>
 <div class="item-content">
 <ul class="settings-list">
-<li><a href="<?php echo $base_url; ?>onboarding/admin_account/profile"><i class="flaticon-user"></i>My Profile</a></li>
+<li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
 <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
 <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
 <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
-<li><a href="<?php echo $base_url; ?>onboarding/admin_logout.php"><i class="flaticon-turn-off"></i>Log Out</a></li>
+<li><a href="login.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
 </ul>
 </div>
 </div>
@@ -114,7 +87,7 @@ aria-expanded="false">
 <div class="item-content">
 <div class="media">
 <div class="item-img bg-skyblue author-online">
-<img src="<?php echo $base_url;?>modules/dashboard/img/figure/student11.png" alt="img">
+<img src="img/figure/student11.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
@@ -129,7 +102,7 @@ Is it usefull for me.....</p>
 </div>
 <div class="media">
 <div class="item-img bg-yellow author-online">
-<img src="<?php echo $base_url;?>modules/dashboard/img/figure/student12.png" alt="img">
+<img src="img/figure/student12.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
@@ -144,7 +117,7 @@ Is it usefull for me.....</p>
 </div>
 <div class="media">
 <div class="item-img bg-pink">
-<img src="<?php echo $base_url;?>modules/dashboard/img/figure/student13.png" alt="img">
+<img src="<?php echo $base_url; ?>modules/dashboard/img/figure/student13.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
@@ -159,7 +132,7 @@ Is it usefull for me.....</p>
 </div>
 <div class="media">
 <div class="item-img bg-violet-blue">
-<img src="<?php echo $base_url;?>modules/dashboard/img/figure/student11.png" alt="img">
+<img src="<?php echo $base_url; ?>modules/dashboard/img/figure/student11.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
