@@ -1,6 +1,4 @@
-
-                
-                <!-- Social Media Start Here -->
+    <!-- Social Media Start Here -->
                 <div class="row gutters-20">
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="card dashboard-card-seven">
@@ -66,8 +64,8 @@
                 <!-- Social Media End Here -->
                 <!-- Footer Area Start Here -->
                 <footer class="footer-wrap-layout1">
-                    <div class="copyright">© Copyrights <a href="#">akkhor</a> 2019. All rights reserved. Designed by <a
-                            href="#">PsdBosS</a></div>
+                    <div class="copyright">© Copyrights <a href="#">AADAMYA</a> <?php echo date('Y'); ?>. All rights reserved. Powered by <a
+                            href="#">AIDCOM IT SOLUTIONS, BETTIAH</a></div>
                 </footer>
                 <!-- Footer Area End Here -->
             </div>

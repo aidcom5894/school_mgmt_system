@@ -1,4 +1,15 @@
+<?php 
+session_start();
+if(!isset($_SESSION['instituteName']))
+{
+	echo '<script language="javascript">';
+	echo 'alert("No Logged in User Found")';
+	echo '</script>';
+	header("location:../onboarding/admin_login");
+}
 
+
+?>
 
 <div id="wrapper" class="wrapper bg-ash">
 <!-- Header Menu Area Start Here -->
@@ -40,29 +51,50 @@
 </div>
 </li>
 </ul>
+
+<?php 
+
+$fetchDetails = mysqli_query($config, "SELECT * FROM institute_registration WHERE institute_name='{$_SESSION['instituteName']}'");
+
+while($row = mysqli_fetch_assoc($fetchDetails))
+{
+	$institute_name = $row['institute_name'];
+	$admin_role = $row['admin_role'];
+	$institute_Id = $row['login_id'];
+	$userAvatar = $row['admin_profile_pic'];
+	$hodName = $row['admin_name'];
+	$hodContactNo = $row['hod_contact'];
+	$instRegNo = $row['inst_reg_id'];
+	$authorisedEmail = $row['institute_email'];
+	$instAddress = $row['institute_address'];
+	$communityStatus = $row['community_status'];
+	$joiningDate = $row['registered_Date'];
+}
+
+?>
 <ul class="navbar-nav">
 <li class="navbar-item dropdown header-admin">
 <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
 aria-expanded="false">
 <div class="admin-title">
-<h5 class="item-title">Stevne Zone</h5>
-<span>Admin</span>
+<h5 class="item-title"><?php echo $institute_name; ?></h5>
+<span><?php echo $institute_Id; ?></span>
 </div>
 <div class="admin-img">
-<img src="<?php echo $base_url; ?>modules/dashboard/img/figure/admin.jpg" alt="Admin">
+<img src="<?php echo $userAvatar; ?>" alt="Admin" style="width: 45px; height: 45px;">
 </div>
 </a>
 <div class="dropdown-menu dropdown-menu-right">
 <div class="item-header">
-<h6 class="item-title">Steven Zone</h6>
+<h6 class="item-title"><?php echo $admin_role; ?></h6>
 </div>
 <div class="item-content">
 <ul class="settings-list">
-<li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
+<li><a href="<?php echo $base_url; ?>dashboard_view/admin_profile"><i class="flaticon-user"></i>My Profile</a></li>
 <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
 <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
 <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
-<li><a href="login.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
+<li><a href="<?php echo $base_url; ?>onboarding/admin_logout"><i class="flaticon-turn-off"></i>Log Out</a></li>
 </ul>
 </div>
 </div>
