@@ -212,4 +212,3 @@ class="flaticon-settings"></i><span>Account</span></a>
 </div>
 </div>
 <!-- Sidebar Area End Here -->
-

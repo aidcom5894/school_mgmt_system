@@ -1,6 +1,5 @@
-<!-- Preloader Start Here -->
-<div id="preloader"></div>
-<!-- Preloader End Here -->
+
+
 <div id="wrapper" class="wrapper bg-ash">
 <!-- Header Menu Area Start Here -->
 <div class="navbar navbar-expand-md header-menu-one bg-light">
@@ -10,8 +9,6 @@
 <img src="<?php echo $base_url; ?>modules/dashboard/img/logo.png" alt="logo">
 </a>
 </div>
-
-
 <div class="toggle-button sidebar-toggle">
 <button type="button" class="item-link">
 <span class="btn-icon-wrap">
@@ -22,8 +19,6 @@
 </button>
 </div>
 </div>
-
-
 <div class="d-md-none mobile-nav-bar">
 <button class="navbar-toggler pulse-animation" type="button" data-toggle="collapse" data-target="#mobile-navbar" aria-expanded="false">
 <i class="far fa-arrow-alt-circle-down"></i>
@@ -54,7 +49,7 @@ aria-expanded="false">
 <span>Admin</span>
 </div>
 <div class="admin-img">
-<img src="img/figure/admin.jpg" alt="Admin">
+<img src="<?php echo $base_url; ?>modules/dashboard/img/figure/admin.jpg" alt="Admin">
 </div>
 </a>
 <div class="dropdown-menu dropdown-menu-right">
@@ -87,7 +82,7 @@ aria-expanded="false">
 <div class="item-content">
 <div class="media">
 <div class="item-img bg-skyblue author-online">
-<img src="img/figure/student11.png" alt="img">
+<img src="<?php echo $base_url; ?>modules/dashboard/img/figure/student11.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
@@ -102,7 +97,7 @@ Is it usefull for me.....</p>
 </div>
 <div class="media">
 <div class="item-img bg-yellow author-online">
-<img src="img/figure/student12.png" alt="img">
+<img src="<?php echo $base_url; ?>modules/dashboard/img/figure/student12.png" alt="img">
 </div>
 <div class="media-body space-sm">
 <div class="item-title">
