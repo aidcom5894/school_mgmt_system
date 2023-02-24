@@ -13,7 +13,7 @@
       }
       else
       {
-        echo "<small>Connection Successful</small>";
+        echo "";
       }
 
     ?>

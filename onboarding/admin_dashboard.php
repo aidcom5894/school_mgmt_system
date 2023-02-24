@@ -1,11 +1,7 @@
 <?php 
-
-include('../configuration/base_address.php');
-include('../configuration/db_configuration.php');
 include('../master_page/admin_panel_header.php');
 include('../master_page/admin_panel_navbar.php');
 include('../master_page/admin_panel_sidebar.php');
-
 ?>
 
 
@@ -14,7 +10,5 @@ include('../master_page/admin_panel_sidebar.php');
 
 
 <?php 
-
 include('../master_page/admin_panel_footer.php');
-
 ?>
