@@ -63,6 +63,7 @@ while($row = mysqli_fetch_assoc($fetchDetails))
 	$institute_Id = $row['login_id'];
 	$userAvatar = $row['admin_profile_pic'];
 	$hodName = $row['admin_name'];
+	$adminPassword = $row['password'];
 	$hodContactNo = $row['hod_contact'];
 	$instRegNo = $row['inst_reg_id'];
 	$authorisedEmail = $row['institute_email'];

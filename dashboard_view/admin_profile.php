@@ -2,8 +2,6 @@
 include('../master_page/admin_panel_header.php');
 include('../master_page/admin_panel_navbar.php');
 include('../master_page/admin_panel_sidebar.php');
-
-
 ?>
 
 <div class="dashboard-content-one">
@@ -44,7 +42,7 @@ data-toggle="dropdown" aria-expanded="false">...</a>
 <h3 class="text-dark-medium font-medium"><?php echo $hodName; ?></h3>
 <div class="header-elements">
 <ul>
-<li><a href="#"><i class="far fa-edit"></i></a></li>
+<li><a href="admin_profile_update"><i class="far fa-edit"></i></a></li>
 <li><a href="#"><i class="fas fa-download"></i></a></li>
 <li><a href="#"><i class="fas fa-cloud-upload-alt"></i></a></li>
 </ul>
@@ -80,23 +78,19 @@ data-toggle="dropdown" aria-expanded="false">...</a>
 		echo "Your Profile Status says <strong>$communityStatus</strong>. Please Update your Institute Address to complete your Profile";
 		echo "</div>";
 	}
-	elseif($communityStatus == "Not Published")
-	{
-		echo "<div class='alert alert-danger' role='alert'>";
-		echo "Your Profile Status says <strong>$communityStatus</strong>. Please Check, Institution Profile Should not Contain System Generated Data";
-		echo "</div>";
-	}
 	
-
-	// elseif($instRegNo != "Enter Institute Registration Details" AND $authorisedEmail != "email@yourinstitute.com" AND $instAddress != "Your Institute Address Here")
-	// {
-	// 	$udpateStatus = mysqli_query($config,"UPDATE institute_registration WHERE ")
-	// }
-
-	else
+	elseif($instRegNo != "Enter Institute Registration Details" AND $authorisedEmail != "email@yourinstitute.com" AND $instAddress != "Your Institute Address Here")
 	{
+		$udpateStatus = mysqli_query($config,"UPDATE institute_registration SET community_status='Published'");
 		echo "<div class='alert alert-success' role='alert'>";
 		echo "Your Profile Status says <strong>$communityStatus</strong>. Your profile is now Published in your School Community.";
+		echo "</div>";
+		header("location:admin_profile");
+	}
+	else
+	{
+		echo "<div class='alert alert-danger' role='alert'>";
+		echo "Your Profile Status says <strong>$communityStatus</strong>. Please edit your Profile from Right Corner Button.";
 		echo "</div>";
 	}
 
