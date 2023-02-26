@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 26, 2023 at 09:20 PM
+-- Generation Time: Feb 26, 2023 at 10:20 PM
 -- Server version: 8.0.32-0ubuntu0.22.04.2
 -- PHP Version: 7.4.33
 
@@ -48,9 +48,9 @@ CREATE TABLE `institute_registration` (
 --
 
 INSERT INTO `institute_registration` (`id`, `institute_name`, `admin_name`, `admin_role`, `hod_contact`, `login_id`, `password`, `inst_reg_id`, `institute_email`, `institute_address`, `admin_profile_pic`, `community_status`, `registered_Date`) VALUES
-(1, 'Aadamya Classes', 'Vivek Robin Kujur', 'super_admin', '+91-9264453821', 'AADA02233821', 'Admin1234#@', '10CTAPK5544G1Z4', 'robinkujur@aidcom.in', 'St. Tersa School Road, Dargah Muhallah, Bettiah', 'http://localhost/school_mgmt_system/modules/avatar/uploaded_avatar/images.jpeg', 'Published', '2023-02-26 17:04:47'),
-(2, 'Code Block', 'Reshma Robin', 'super_admin', '+91-6205969520', 'CODE02239520', 'Admin1234#@', 'asdv', 'sdf@gmail.com', 'adsfa asdf', 'http://localhost/school_mgmt_system/modules/avatar/uploaded_avatar/', 'Published', '2023-02-26 21:09:06'),
-(3, 'Papappas', 'pp Daniel', 'super_admin', '+91-1328535000', 'PAPA02235000', '123456789', 'asdasdf', 'bsb@gmail.com', 'asdf sadfasdf', 'http://localhost/school_mgmt_system/modules/avatar/uploaded_avatar/image2.jpg', 'Published', '2023-02-26 21:17:46');
+(1, 'Aadamya Classes', 'Vivek Robin Kujur', 'super_admin', '+91-9264453821', 'AADA02233821', 'Admin1234#@', '10CTAPK5544G1Z4', 'robinkujur@aidcom.in', 'St. Tersa School Road, Dargah Muhallah, Bettiah', 'http://localhost/school_mgmt_system/modules/avatar/uploaded_avatar/avatar.png', 'Published', '2023-02-26 17:04:47'),
+(2, 'Code Block', 'Reshma Robin', 'super_admin', '+91-6205969520', 'CODE02239520', 'Admin1234#@', 'asdv', 'sdf@gmail.com', 'adsfa asdf', 'http://localhost/school_mgmt_system/modules/avatar/uploaded_avatar/Profile1.png', 'Published', '2023-02-26 21:09:06'),
+(3, 'Papappas', 'pp Daniel', 'super_admin', '+91-1328535000', 'PAPA02235000', '123456789', 'asdasdf', 'bsb@gmail.com', 'asdf sadfasdf', 'http://localhost/school_mgmt_system/modules/avatar/uploaded_avatar/images.jpeg', 'Published', '2023-02-26 21:17:46');
 
 --
 -- Indexes for dumped tables

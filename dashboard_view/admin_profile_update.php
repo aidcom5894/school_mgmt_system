@@ -56,12 +56,10 @@ if(isset($_POST['updateDetails']))
 	$dbdata3 = "Your Institute Address Here";
 
 	// handling images here
-	
-	$uploadFileName = $_FILES['userProfilePic']['name'];
-	$uploadFolder = "modules/avatar/uploaded_avatar/";
-	$tempFileName = $_FILES['userProfilePic']['tmp_name'];
-
-	$imageLocation = $base_url.$uploadFolder.$uploadFileName;
+	$imageTargetFolder = "modules/avatar/uploaded_avatar/";
+	$fileOrgName = $_FILES["userProfilePic"]["name"];
+	$fileTmpName = $_FILES["userProfilePic"]["tmp_name"];
+	$imageLocation = $base_url.$imageTargetFolder.$fileOrgName;
 
 	$udpateAdminName = mysqli_query($config,"UPDATE institute_registration SET admin_name='$adminName' WHERE institute_name='{$_SESSION['instituteName']}'");
 
@@ -94,11 +92,12 @@ if(isset($_POST['updateDetails']))
 	{
 		$udpateComStatus = mysqli_query($config,"UPDATE institute_registration SET community_status='Not Published' WHERE institute_name='{$_SESSION['instituteName']}'");
 	}
-	else if($updateUserAvatar)
+	else if($updateUserAvatar )
 	{
-		move_uploaded_file($tempFileName,$uploadFolder.$uploadFileName);
+		move_uploaded_file($fileTmpName,$imageTargetFolder.$fileOrgName);
 		echo "<script>alert(User Profile Updated)</script>";
 		header("location:admin_profile");
+				
 	}
 	else
 	{
