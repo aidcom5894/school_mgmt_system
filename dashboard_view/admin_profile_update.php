@@ -56,10 +56,15 @@ if(isset($_POST['updateDetails']))
 	$dbdata3 = "Your Institute Address Here";
 
 	// handling images here
-	$imageTargetFolder = "modules/avatar/uploaded_avatar/";
+	$imageTargetFolder = "dashboard_view/uploads/";
+
 	$fileOrgName = $_FILES["userProfilePic"]["name"];
 	$fileTmpName = $_FILES["userProfilePic"]["tmp_name"];
+	// $file_type = $_FILES['foreign_character_upload']['type'];
+	// $allowedFileTypes = array("image/jpg","image/png","image/jpeg","image/webp","image/svg");
 	$imageLocation = $base_url.$imageTargetFolder.$fileOrgName;
+
+	
 
 	$udpateAdminName = mysqli_query($config,"UPDATE institute_registration SET admin_name='$adminName' WHERE institute_name='{$_SESSION['instituteName']}'");
 
@@ -74,6 +79,8 @@ if(isset($_POST['updateDetails']))
 	$communityStatusUpdate = mysqli_query($config, "SELECT inst_reg_id,institute_email,institute_address FROM institute_registration WHERE inst_reg_id='$dbdata1'|| institute_email='$dbdata2' || institute_address='$dbdata3'");
 
 	$updateUserAvatar = mysqli_query($config,"UPDATE institute_registration SET admin_profile_pic='$imageLocation' WHERE institute_name='{$_SESSION['instituteName']}'");
+
+	move_uploaded_file($fileTmpName,$imageTargetFolder.$fileOrgName);
 
 
 	if($udpateAdminName || $updateAdminPassword || $updateInstituteId || $updateAdminEmail || $updateInstitutionAddress || $updateUserAvatar)
@@ -92,13 +99,19 @@ if(isset($_POST['updateDetails']))
 	{
 		$udpateComStatus = mysqli_query($config,"UPDATE institute_registration SET community_status='Not Published' WHERE institute_name='{$_SESSION['instituteName']}'");
 	}
-	else if($updateUserAvatar )
-	{
-		move_uploaded_file($fileTmpName,$imageTargetFolder.$fileOrgName);
+
+	else if($updateUserAvatar)
+	{		
 		echo "<script>alert(User Profile Updated)</script>";
 		header("location:admin_profile");
 				
 	}
+	// else if(!in_array($allowedFileTypes, $allowedFileTypes))
+	// {
+	// 	echo "<div class='alert alert-danger' role='alert'>";
+	// 	echo "This File Type is not allowed for User Avatar. Allowed File Types includes: .jpg,.jpeg,.png,.webp,.svg";
+	// 	echo "</div>";
+	// }
 	else
 	{
 		echo "<script>alert('No changes made to Profile')</script>";
