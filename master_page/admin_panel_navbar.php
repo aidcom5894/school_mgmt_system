@@ -8,6 +8,17 @@ if(!isset($_SESSION['instituteName']))
 	header("location:../onboarding/admin_login");
 }
 
+// if(!isset($_SESSION['CREATED']))
+// 	{
+// 		$_SESSION['CREATED'] = time();
+// 	}
+// 	else if(time() - $_SESSION['CREATED'] > 180)
+// 	{
+// 		session_destroy();
+// 		header("location:../onboarding/admin_login");
+		
+// 	}
+
 
 ?>
 

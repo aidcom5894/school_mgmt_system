@@ -65,32 +65,33 @@ data-toggle="dropdown" aria-expanded="false">...</a>
 		echo "</div>";
 	}
 
-	elseif($authorisedEmail == "email@yourinstitute.com")
+	else if($authorisedEmail == "email@yourinstitute.com")
 	{
 		echo "<div class='alert alert-danger' role='alert'>";
 		echo "Your Profile Status says <strong>$communityStatus</strong>. Please Update Admin Authorised Email to complete your Profile";
 		echo "</div>";
 	}
 	
-	elseif($instAddress == "Your Institute Address Here")
+	else if($instAddress == "Your Institute Address Here")
 	{
 		echo "<div class='alert alert-danger' role='alert'>";
 		echo "Your Profile Status says <strong>$communityStatus</strong>. Please Update your Institute Address to complete your Profile";
 		echo "</div>";
 	}
 	
-	elseif($instRegNo != "Enter Institute Registration Details" AND $authorisedEmail != "email@yourinstitute.com" AND $instAddress != "Your Institute Address Here")
+	else if($instRegNo != "Enter Institute Registration Details" AND $authorisedEmail != "email@yourinstitute.com" AND $instAddress != "Your Institute Address Here")
 	{
-		$udpateStatus = mysqli_query($config,"UPDATE institute_registration SET community_status='Published'");
+		$udpateStatus = mysqli_query($config,"UPDATE institute_registration SET community_status='Published' WHERE institute_name='{$_SESSION['instituteName']}'");
 		echo "<div class='alert alert-success' role='alert'>";
 		echo "Your Profile Status says <strong>$communityStatus</strong>. Your profile is now Published in your School Community.";
 		echo "</div>";
-		header("location:admin_profile");
+		header("Refresh:1; url=admin_profile");
+
 	}
 	else
 	{
 		echo "<div class='alert alert-danger' role='alert'>";
-		echo "Your Profile Status says <strong>$communityStatus</strong>. Please edit your Profile from Right Corner Button.";
+		echo "Your Profile Status says <strong>$communityStatus</strong>. Please update your Complete Profile from Right Corner Button.";
 		echo "</div>";
 	}
 

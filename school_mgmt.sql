@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 26, 2023 at 01:00 AM
+-- Generation Time: Feb 26, 2023 at 09:20 PM
 -- Server version: 8.0.32-0ubuntu0.22.04.2
 -- PHP Version: 7.4.33
 
@@ -48,13 +48,9 @@ CREATE TABLE `institute_registration` (
 --
 
 INSERT INTO `institute_registration` (`id`, `institute_name`, `admin_name`, `admin_role`, `hod_contact`, `login_id`, `password`, `inst_reg_id`, `institute_email`, `institute_address`, `admin_profile_pic`, `community_status`, `registered_Date`) VALUES
-(1, 'Demonstration Account', 'Sonali Dongre 5', 'super_admin', '+91-9199450345', 'DEMO02230345', 'Sonali2922', '65465', 'support@aidcom.in', 'RobinR2204#@', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar17.png', 'Published', '2023-02-19 20:24:26'),
-(2, 'Xiaomi', 'Sonali Dongre 5', 'super_admin', '+91-9971121646', 'XIAO02231646', 'Sonali2922', '65465', 'support@aidcom.in', 'RobinR2204#@', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar9.png', 'Published', '2023-02-20 00:34:45'),
-(3, 'Zebronics Classes', 'Sonali Dongre 5', 'super_admin', '+91-5422132891', 'ZEBR02232891', 'Sonali2922', '65465', 'support@aidcom.in', 'RobinR2204#@', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar7.png', 'Published', '2023-02-23 00:14:42'),
-(4, 'Sidhartha Institute', 'Sonali Dongre 5', 'super_admin', '+91-8775465464', 'SIDH02235464', 'Sonali2922', '65465', 'support@aidcom.in', 'RobinR2204#@', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar14.png', 'Published', '2023-02-23 21:58:32'),
-(5, 'Pixie Art', 'Sonali Dongre 5', 'super_admin', '+91-4001001220', 'PIXI02231220', 'Sonali2922', '65465', 'support@aidcom.in', 'RobinR2204#@', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar19.png', 'Published', '2023-02-25 21:48:21'),
-(6, 'Raspberry', 'Sonali Dongre 5', 'super_admin', '+91-8976453213', 'RASP02233213', 'Sonali2922', '65465', 'support@aidcom.in', 'RobinR2204#@', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar8.png', 'Published', '2023-02-26 00:08:55'),
-(7, 'Sonali Education', 'Sonali Dongre 5', 'super_admin', '+91-1324654354', 'SONA02234354', 'Sonali2922', '65465', 'support@aidcom.in', 'RobinR2204#@', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar14.png', 'Published', '2023-02-26 00:14:16');
+(1, 'Aadamya Classes', 'Vivek Robin Kujur', 'super_admin', '+91-9264453821', 'AADA02233821', 'Admin1234#@', '10CTAPK5544G1Z4', 'robinkujur@aidcom.in', 'St. Tersa School Road, Dargah Muhallah, Bettiah', 'http://localhost/school_mgmt_system/modules/avatar/uploaded_avatar/images.jpeg', 'Published', '2023-02-26 17:04:47'),
+(2, 'Code Block', 'Reshma Robin', 'super_admin', '+91-6205969520', 'CODE02239520', 'Admin1234#@', 'asdv', 'sdf@gmail.com', 'adsfa asdf', 'http://localhost/school_mgmt_system/modules/avatar/uploaded_avatar/', 'Published', '2023-02-26 21:09:06'),
+(3, 'Papappas', 'pp Daniel', 'super_admin', '+91-1328535000', 'PAPA02235000', '123456789', 'asdasdf', 'bsb@gmail.com', 'asdf sadfasdf', 'http://localhost/school_mgmt_system/modules/avatar/uploaded_avatar/image2.jpg', 'Published', '2023-02-26 21:17:46');
 
 --
 -- Indexes for dumped tables
@@ -74,7 +70,7 @@ ALTER TABLE `institute_registration`
 -- AUTO_INCREMENT for table `institute_registration`
 --
 ALTER TABLE `institute_registration`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
