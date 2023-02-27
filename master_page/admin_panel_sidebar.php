@@ -14,23 +14,40 @@
 <a href="#" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
 <ul class="nav sub-group-menu">
 <li class="nav-item">
-<a href="index.html" class="nav-link"><i class="fas fa-angle-right"></i>Admin</a>
+<a href="" class="nav-link"><i class="fas fa-angle-right"></i>Address Students</a>
 </li>
+
 <li class="nav-item">
-<a href="index3.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Students</a>
+<a href="#" class="nav-link"><i
+class="fas fa-angle-right"></i>Address Teachers</a>
 </li>
+
 <li class="nav-item">
-<a href="index4.html" class="nav-link"><i class="fas fa-angle-right"></i>Parents</a>
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>My Profile</a>
 </li>
+
 <li class="nav-item">
 <a href="index5.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Teachers</a>
+class="fas fa-angle-right"></i>Priority Tasks</a>
 </li>
+
+<li class="nav-item">
+<a href="index5.html" class="nav-link"><i
+class="fas fa-angle-right"></i>Transfer Administration</a>
+</li>
+
+<li class="nav-item">
+<a href="index5.html" class="nav-link"><i
+class="fas fa-angle-right"></i>View Community</a>
+</li>
+
+
 </ul>
 </li>
+
+
 <li class="nav-item sidebar-nav-item">
-<a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
+<a href="#" class="nav-link"><i class="flaticon-user"></i><span>Administration Mgmt.</span></a>
 <ul class="nav sub-group-menu">
 <li class="nav-item">
 <a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>All

@@ -56,13 +56,13 @@ if(isset($_POST['updateDetails']))
 	$dbdata3 = "Your Institute Address Here";
 
 	// handling images here
-	$imageTargetFolder = "dashboard_view/uploads/";
+	$imageTargetFolder = "uploads/";
 
 	$fileOrgName = $_FILES["userProfilePic"]["name"];
 	$fileTmpName = $_FILES["userProfilePic"]["tmp_name"];
 	// $file_type = $_FILES['foreign_character_upload']['type'];
 	// $allowedFileTypes = array("image/jpg","image/png","image/jpeg","image/webp","image/svg");
-	$imageLocation = $base_url.$imageTargetFolder.$fileOrgName;
+	$imageLocation = $base_url."dashboard_view/".$imageTargetFolder.$fileOrgName;
 
 	
 

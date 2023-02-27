@@ -14,7 +14,7 @@ include('../configuration/base_address.php');
 <div class="col-lg-6 col-md-12 bg-img">
 <div class="bg-img-inner">
 <div class="info">
-<div class="name_wrap"><h3><span>Welcome</span> To Oddo<span class="overlay_effect"></span></h3></div>
+<div class="name_wrap"><h3><span>ADMIN</span> LOGIN PORTAL<span class="overlay_effect"></span></h3></div>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Ipsum has been the industry's standard dummy </p>
 </div>
 </div>
