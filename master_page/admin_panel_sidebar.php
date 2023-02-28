@@ -50,45 +50,124 @@ class="fas fa-angle-right"></i>View Community</a>
 <a href="#" class="nav-link"><i class="flaticon-user"></i><span>Administration Mgmt.</span></a>
 <ul class="nav sub-group-menu">
 <li class="nav-item">
-<a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>All
-Students</a>
+<a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>Emergency Contacts</a>
 </li>
 <li class="nav-item">
 <a href="student-details.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Student Details</a>
+class="fas fa-angle-right"></i>Manage Office Admin</a>
 </li>
 <li class="nav-item">
 <a href="admit-form.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Admission Form</a>
-</li>
-<li class="nav-item">
-<a href="student-promotion.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Student Promotion</a>
+class="fas fa-angle-right"></i>Manage Other Admin</a>
 </li>
 </ul>
 </li>
+
 <li class="nav-item sidebar-nav-item">
 <a href="#" class="nav-link"><i
 class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
 <ul class="nav sub-group-menu">
+
 <li class="nav-item">
-<a href="all-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>All
-Teachers</a>
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Add Class Teacher</a>
 </li>
+
 <li class="nav-item">
-<a href="teacher-details.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Teacher Details</a>
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Add Subject Teacher</a>
 </li>
+
 <li class="nav-item">
-<a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Add
-Teacher</a>
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Blow a Whistle</a>
 </li>
+
 <li class="nav-item">
-<a href="teacher-payment.html" class="nav-link"><i
-class="fas fa-angle-right"></i>Payment</a>
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Class Teacher Details</a>
 </li>
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Leave Application</a>
+</li>
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>MIS Portal</a>
+</li>
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Report a Student</a>
+</li>
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Subject Teacher Details</a>
+</li>
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Teachers Profile</a>
+</li>
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>View New Application</a>
+</li>
+
 </ul>
 </li>
+
+<li class="nav-item sidebar-nav-item">
+<a href="#" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
+<ul class="nav sub-group-menu">
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Allowance</a>
+</li>
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Creative Ideas</a>
+</li>
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Exam Results</a>
+</li>
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Leave Application</a>
+</li>
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Portal Registration</a>
+</li>
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Profile Status</a>
+</li>
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Request a Change</a>
+</li>
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Reset Password</a>
+</li>
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>TC Application</a>
+</li>
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Teachers Feedback</a>
+</li>
+
+</ul>
+</li>
+
+
+
 <li class="nav-item sidebar-nav-item">
 <a href="#" class="nav-link"><i class="flaticon-couple"></i><span>Parents</span></a>
 <ul class="nav sub-group-menu">
@@ -119,6 +198,9 @@ Book</a>
 </li>
 </ul>
 </li>
+
+
+
 <li class="nav-item sidebar-nav-item">
 <a href="#" class="nav-link"><i class="flaticon-technological"></i><span>Acconunt</span></a>
 <ul class="nav sub-group-menu">
@@ -136,6 +218,8 @@ Expenses</a>
 </li>
 </ul>
 </li>
+
+
 <li class="nav-item sidebar-nav-item">
 <a href="#" class="nav-link"><i
 class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Class</span></a>
@@ -150,6 +234,9 @@ Class</a>
 </li>
 </ul>
 </li>
+
+
+
 <li class="nav-item">
 <a href="all-subject.html" class="nav-link"><i
 class="flaticon-open-book"></i><span>Subject</span></a>
@@ -175,6 +262,8 @@ Grades</a>
 </li>
 </ul>
 </li>
+
+
 <li class="nav-item">
 <a href="transport.html" class="nav-link"><i
 class="flaticon-bus-side-view"></i><span>Transport</span></a>
