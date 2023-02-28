@@ -10,7 +10,7 @@ include('../master_page/admin_panel_sidebar.php');
 <h3>Admin Dashboard</h3>
 <ul>
 <li>
-<a href="<?php echo $base_url; ?>">Home</a>
+<a href="admin_dashboard">Home</a>
 </li>
 <li>Admin</li>
 </ul>

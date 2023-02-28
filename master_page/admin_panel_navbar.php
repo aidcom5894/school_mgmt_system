@@ -8,18 +8,7 @@ if(!isset($_SESSION['instituteName']))
 	header("location:../onboarding/admin_login");
 }
 
-// if(time() - $_SESSION['timestamp'] > 180) 
-// {
-//     echo"<script>alert('Welcom');</script>";
-//     unset($_SESSION['instituteName'], $_SESSION['timestamp']);
-//     $_SESSION['logged_in'] = false;
-//     hheader("location:../onboarding/admin_login");
-//     exit;
-// } 
-// else
-// {
-//     $_SESSION['timestamp'] = time(); 
-// }
+
 
 ?>
 
@@ -104,7 +93,7 @@ aria-expanded="false">
 <div class="item-content">
 <ul class="settings-list">
 <li><a href="<?php echo $base_url; ?>dashboard_view/admin_profile"><i class="flaticon-user"></i>My Profile</a></li>
-<li><a href="#"><i class="flaticon-list"></i>Task</a></li>
+<li><a href="<?php echo $base_url; ?>dashboard_view/task_scheduler"><i class="flaticon-list"></i>Task</a></li>
 <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
 <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
 <li><a href="<?php echo $base_url; ?>onboarding/admin_logout"><i class="flaticon-turn-off"></i>Log Out</a></li>
@@ -189,8 +178,7 @@ Is it usefull for me.....</p>
 </div>
 </li>
 <li class="navbar-item dropdown header-notification">
-<a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-aria-expanded="false">
+<a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
 <i class="far fa-bell"></i>
 <div class="item-title d-md-none text-16 mg-l-10">Notification</div>
 <span>8</span>

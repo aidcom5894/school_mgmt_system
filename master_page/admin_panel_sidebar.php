@@ -64,6 +64,69 @@ class="fas fa-angle-right"></i>Manage Other Admin</a>
 </li>
 
 <li class="nav-item sidebar-nav-item">
+<a href="#" class="nav-link"><i class="flaticon-mortarboard"></i><span>Admission Mgmt.</span></a>
+<ul class="nav sub-group-menu">
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Announcements</a>
+</li>
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Enroll Students</a>
+</li>
+
+
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Publish Results</a>
+</li>
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Referals</a> 
+</li>
+
+<li class="nav-item">
+<a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Students Application</a> 
+</li>
+
+<li class="nav-item">
+<a href="admit-form.html" class="nav-link"><i class="fas fa-angle-right"></i>Total Collection</a> 
+</li>
+</ul>
+</li>
+
+<li class="nav-item sidebar-nav-item">
+<a href="#" class="nav-link"><i class="flaticon-money"></i><span>Financial Operations</span></a>
+<ul class="nav sub-group-menu">
+
+<li class="nav-item">
+<a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>Assign Cashier</a>
+</li>
+
+<li class="nav-item">
+<a href="student-details.html" class="nav-link"><i class="fas fa-angle-right"></i></a>
+</li>
+
+<li class="nav-item">
+<a href="admit-form.html" class="nav-link"><i class="fas fa-angle-right"></i>Referals</a> 
+</li>
+
+<li class="nav-item">
+<a href="admit-form.html" class="nav-link"><i class="fas fa-angle-right"></i>Students Application</a> 
+</li>
+
+<li class="nav-item">
+<a href="admit-form.html" class="nav-link"><i class="fas fa-angle-right"></i>Total Collection</a> 
+</li>
+</ul>
+</li>
+
+
+
+
+
+<li class="nav-item sidebar-nav-item">
 <a href="#" class="nav-link"><i
 class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
 <ul class="nav sub-group-menu">
