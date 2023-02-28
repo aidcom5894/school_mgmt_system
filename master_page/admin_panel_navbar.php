@@ -8,17 +8,18 @@ if(!isset($_SESSION['instituteName']))
 	header("location:../onboarding/admin_login");
 }
 
-// if(!isset($_SESSION['CREATED']))
-// 	{
-// 		$_SESSION['CREATED'] = time();
-// 	}
-// 	else if(time() - $_SESSION['CREATED'] > 180)
-// 	{
-// 		session_destroy();
-// 		header("location:../onboarding/admin_login");
-		
-// 	}
-
+// if(time() - $_SESSION['timestamp'] > 180) 
+// {
+//     echo"<script>alert('Welcom');</script>";
+//     unset($_SESSION['instituteName'], $_SESSION['timestamp']);
+//     $_SESSION['logged_in'] = false;
+//     hheader("location:../onboarding/admin_login");
+//     exit;
+// } 
+// else
+// {
+//     $_SESSION['timestamp'] = time(); 
+// }
 
 ?>
 
