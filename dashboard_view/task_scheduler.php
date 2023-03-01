@@ -51,24 +51,24 @@ class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
 
 
 <div class="col-xl-3 col-lg-6 col-12 form-group">
-<label>Completion Date: *</label>
+<label>Scheduled Date: *</label>
 <input type="text" placeholder="dd/mm/yyyy" class="form-control air-datepicker"
 data-position='bottom right'>
 <i class="far fa-calendar-alt"></i>
 </div>
 
 <div class="col-xl-3 col-lg-6 col-12 form-group">
-                                    <label>Blood Group *</label>
-                                    <select class="select2">
-                                        <option value="">Please Select Group *</option>
-                                        <option value="1">A+</option>
-                                        <option value="2">A-</option>
-                                        <option value="3">B+</option>
-                                        <option value="3">B-</option>
-                                        <option value="3">O+</option>
-                                        <option value="3">O-</option>
-                                    </select>
-                                </div>
+<label>Work Severity *</label>
+<select class="select2 form-control">
+<option value="">Task Severity</option>
+<option value="1">A+</option>
+<option value="2">A-</option>
+<option value="3">B+</option>
+<option value="3">B-</option>
+<option value="3">O+</option>
+<option value="3">O-</option>
+</select>
+</div>
 
 
 
