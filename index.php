@@ -107,7 +107,7 @@ include('./configuration/db_configuration.php');
 <!-- <i class="icon-34"></i> -->
 </div>
 <div class="content">
-<h4 class="title">Dilkhush</h4>
+<h4 class="title">Scholarship Facility</h4>
 <p>Lorem ipsum dolor sit amet cont adipiscing elit.</p>
 </div>
 </div>
