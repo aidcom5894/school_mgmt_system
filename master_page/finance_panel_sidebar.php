@@ -101,7 +101,7 @@ class="fas fa-angle-right"></i>Manage Other Admin</a>
 <ul class="nav sub-group-menu">
 
 <li class="nav-item">
-<a href="<?php echo $base_url; ?>finance_mgmt/assign_cashier" class="nav-link"><i class="fas fa-angle-right"></i>Assign Cashier</a>
+<a href="all-student.html" class="nav-link"><i class="fas fa-angle-right"></i>Assign Cashier</a>
 </li>
 
 <li class="nav-item">

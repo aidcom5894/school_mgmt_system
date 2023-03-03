@@ -61,7 +61,7 @@ data-position='bottom right'>
 <label>Work Severity *</label>
 <select class="select2 form-control">
 <option value="">Task Severity</option>
-<option value="1">A+</option>
+<option value="1">Urgent</option>
 <option value="2">A-</option>
 <option value="3">B+</option>
 <option value="3">B-</option>

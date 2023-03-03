@@ -39,7 +39,7 @@ include('../master_page/onboarding_header.php');
 </div>
 
 <div class="form-group">
-<a href="<?php echo $base_url;?>onboarding/admin_login" class="btn btn-primary btn-lg btn-theme">OFFICE ADMIN</a>	
+<a href="<?php echo $base_url;?>onboarding/office_admin_login" class="btn btn-primary btn-lg btn-theme">OFFICE ADMIN</a>	
 </div>
 
 
