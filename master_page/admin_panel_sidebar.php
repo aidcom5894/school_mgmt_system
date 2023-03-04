@@ -8,6 +8,7 @@
 <a href="index.html"><img src="<?php echo $base_url;?>img/logo1.png" alt="logo"></a>
 </div>
 </div>
+
 <div class="sidebar-menu-content">
 <ul class="nav nav-sidebar-menu sidebar-toggle-view">
 <li class="nav-item sidebar-nav-item">

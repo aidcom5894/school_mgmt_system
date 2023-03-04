@@ -70,7 +70,17 @@ while($row = mysqli_fetch_assoc($fetchDetails))
 	$authorisedEmail = $row['institute_email'];
 	$instAddress = $row['institute_address'];
 	$communityStatus = $row['community_status'];
-	$joiningDate = $row['registered_Date'];
+	$joiningDate = $row['portal_registration_date'];
+	$accountType = $row['account_type'];
+
+	$currentDate = date('Y-m-d');
+	$futureDate = date("Y-m-d", strtotime("$currentDate - 15 days"));
+	$deletionDate = date("Y-m-d", strtotime("$currentDate - 30 days"));
+
+	$date1 = date('Y-m-d',strtotime($joiningDate));
+
+	$expiryAlert = "<br><span id='upgradeMsg'><strong><br>Upgrade By:&nbsp;</strong>.$futureDate</span>";
+
 }
 
 ?>
@@ -86,10 +96,41 @@ aria-expanded="false">
 <img src="<?php echo $userAvatar; ?>" alt="Admin" style="width: 45px; height: 45px;">
 </div>
 </a>
+
 <div class="dropdown-menu dropdown-menu-right">
 <div class="item-header">
-<h6 class="item-title"><?php echo $admin_role; ?></h6>
+<h6 class="item-title"><?php echo $accountType.$expiryAlert; ?></h6>
 </div>
+
+<?php 
+	
+	
+	if($accountType == "Premium Account" OR $currentDate < $futureDate AND $accountType == "Premium Account" OR $currentDate == $futureDate AND $accountType == "Premium Account")
+	{
+		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').style.display = 'none';</script>";
+	}
+	
+	else if($currentDate > $futureDate AND $accountType == "Trial Account")
+	{
+		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').innerHTML = 'Account Suspended';</script>";
+	}
+
+	// else if($currentDate > $deletionDate AND $accountType == "Trial Account")
+	// {
+		
+		
+	// }
+
+	
+	else
+	{
+		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').style.display = 'inline';</script>";
+	}
+
+?>
+
+
+
 <div class="item-content">
 <ul class="settings-list">
 <li><a href="<?php echo $base_url; ?>dashboard_view/admin_profile"><i class="flaticon-user"></i>My Profile</a></li>
@@ -177,6 +218,9 @@ Is it usefull for me.....</p>
 </div>
 </div>
 </li>
+
+
+<!-- section for reminding the user for upgradin the account to professional type -->
 <li class="navbar-item dropdown header-notification">
 <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
 <i class="far fa-bell"></i>
@@ -188,6 +232,7 @@ Is it usefull for me.....</p>
 <div class="item-header">
 <h6 class="item-title">03 Notifiacations</h6>
 </div>
+
 <div class="item-content">
 <div class="media">
 <div class="item-icon bg-skyblue">
@@ -219,6 +264,9 @@ Is it usefull for me.....</p>
 </div>
 </div>
 </li>
+<!-- section for reminding the user for upgradin the account to professional type -->
+
+
 <li class="navbar-item dropdown header-language">
 <a class="navbar-nav-link dropdown-toggle" href="#" role="button" 
 data-toggle="dropdown" aria-expanded="false"><i class="fas fa-globe-americas"></i>EN</a>
@@ -232,4 +280,5 @@ data-toggle="dropdown" aria-expanded="false"><i class="fas fa-globe-americas"></
 </ul>
 </div>
 </div>
+
 <!-- Header Menu Area End Here -->
