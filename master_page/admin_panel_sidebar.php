@@ -1,4 +1,6 @@
 
+
+</style>
 <!-- Page Area Start Here -->
 <div class="dashboard-page-one">
 <!-- Sidebar Area Start Here -->
@@ -8,6 +10,8 @@
 <a href="index.html"><img src="<?php echo $base_url;?>img/logo1.png" alt="logo"></a>
 </div>
 </div>
+
+
 
 <div class="sidebar-menu-content">
 <ul class="nav nav-sidebar-menu sidebar-toggle-view">

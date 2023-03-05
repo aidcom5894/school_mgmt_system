@@ -67,6 +67,7 @@ if(isset($_POST['dashboardLogin']))
 
 	$matchDetails = mysqli_query($config,"SELECT institute_name,login_id,password FROM institute_registration WHERE institute_name='$instituteName' AND login_id='$instituteLogin' AND password='$institutePassword'");
 
+	
 	if(mysqli_num_rows($matchDetails)>0)
 	{
 		session_start();
@@ -77,6 +78,7 @@ if(isset($_POST['dashboardLogin']))
 		header("location:admin_dashboard");
 			
 	}
+	
 	else
 	{
 		echo "<svg xmlns='http://www.w3.org/2000/svg' style='display: none;'>";
@@ -92,6 +94,13 @@ if(isset($_POST['dashboardLogin']))
 		echo "</div>";
 
 	}
+
+	
+
+
+
+
+
 }
 
 ?>

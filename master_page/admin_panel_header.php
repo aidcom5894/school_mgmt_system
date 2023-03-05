@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="<?php echo $base_url; ?>modules/dashboard/css/style.css">
     <!-- Modernize js -->
     <script src="<?php echo $base_url; ?>modules/dashboard/js/modernizr-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>

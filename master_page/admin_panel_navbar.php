@@ -72,10 +72,11 @@ while($row = mysqli_fetch_assoc($fetchDetails))
 	$communityStatus = $row['community_status'];
 	$joiningDate = $row['portal_registration_date'];
 	$accountType = $row['account_type'];
+	$accountStatus = $row['account_status'];
 
 	$currentDate = date('Y-m-d');
 	$futureDate = date("Y-m-d", strtotime("$currentDate - 15 days"));
-	$deletionDate = date("Y-m-d", strtotime("$currentDate - 30 days"));
+	// $deletionDate = date("Y-m-d", strtotime("$currentDate - 30 days"));
 
 	$date1 = date('Y-m-d',strtotime($joiningDate));
 
@@ -104,7 +105,6 @@ aria-expanded="false">
 
 <?php 
 	
-	
 	if($accountType == "Premium Account" OR $currentDate < $futureDate AND $accountType == "Premium Account" OR $currentDate == $futureDate AND $accountType == "Premium Account")
 	{
 		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').style.display = 'none';</script>";
@@ -113,15 +113,20 @@ aria-expanded="false">
 	else if($currentDate > $futureDate AND $accountType == "Trial Account")
 	{
 		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').innerHTML = 'Account Suspended';</script>";
+		mysqli_query($config,"UPDATE institute_registration SET account_status='Account_Suspended' WHERE institute_name='{$_SESSION['instituteName']}'");
+		
+		echo '<script type="text/javascript">
+				swal({
+				  title: "Payment Due!",
+				  text: "Your account has been Suspended due to Trial Period Expiry. Please upgrade to Premium to access your Dashboard!",
+				  icon: "error",
+				  closeOnEsc: false,
+				  closeOnClickOutside: false,
+				  button: "Upgrade to Premium!",}).then(()=>{ window.location.href = "../premium/account_listing" });
+			  </script>';
+
 	}
 
-	// else if($currentDate > $deletionDate AND $accountType == "Trial Account")
-	// {
-		
-		
-	// }
-
-	
 	else
 	{
 		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').style.display = 'inline';</script>";
