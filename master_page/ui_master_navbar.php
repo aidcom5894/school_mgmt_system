@@ -20,11 +20,13 @@ include('../configuration/base_address.php');
 </ul>
 </div>
 <div class="header-top-right">
+
 <ul class="header-info">
 <li><a href="<?php echo $base_url;?>onboarding/login_platform">Login</a></li>
 <li><a href="<?php echo $base_url;?>onboarding/admin_registration">Register</a></li>
 <li class="header-btn"><a href="#" class="edu-btn btn-secondary btn-medium">Apply Now <i class="icon-4"></i></a></li>
 </ul>
+
 </div>
 </div>
 </div>
@@ -168,6 +170,10 @@ include('../configuration/base_address.php');
 <span class="count">0</span>
 </a>
 </li>
+
+
+
+
 <li class="mobile-menu-bar d-block d-xl-none">
 <button class="hamberger-button">
 <i class="icon-54"></i>
@@ -229,6 +235,8 @@ include('../configuration/base_address.php');
 </li>
 </ul>
 </li>
+
+
 <li class="has-droupdown"><a href="#">Pages</a>
 <ul class="mega-menu">
 <li>
@@ -287,6 +295,8 @@ include('../configuration/base_address.php');
 </ul>
 </li>
 
+
+
 <li class="has-droupdown"><a href="#">Blog</a>
 <ul class="submenu">
 <li><a href="blog-standard.html">Blog Standard</a></li>
@@ -295,12 +305,19 @@ include('../configuration/base_address.php');
 <li><a href="blog-details.html">Blog Details</a></li>
 </ul>
 </li>
+
+
 <li class="has-droupdown"><a href="#">Contact</a>
 <ul class="submenu">
 <li><a href="contact-us.html">Contact Us</a></li>
 <li><a href="contact-me.html">Contact Me</a></li>
 </ul>
 </li>
+
+<li><a href="<?php echo $base_url;?>onboarding/login_platform">Login</a></li>
+<li><a href="<?php echo $base_url;?>onboarding/admin_registration">Register</a></li>
+<li class="header-btn"><a href="#" class="edu-btn btn-secondary btn-medium">Apply Now <i class="icon-4"></i></a></li>
+
 </ul>
 </div>
 </div>

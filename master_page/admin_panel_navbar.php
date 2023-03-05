@@ -105,7 +105,7 @@ aria-expanded="false">
 
 <?php 
 	
-	if($accountType == "Premium Account" OR $currentDate < $futureDate AND $accountType == "Premium Account" OR $currentDate == $futureDate AND $accountType == "Premium Account")
+	if($accountType == "Premium Account" OR $currentDate < $futureDate AND $accountType == "Premium Account" OR $currentDate == $futureDate AND $accountType == "Premium Account" OR $currentDate > $futureDate AND $accountType == "Premium Account")
 	{
 		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').style.display = 'none';</script>";
 	}
