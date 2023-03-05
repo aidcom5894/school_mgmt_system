@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 05, 2023 at 01:55 PM
+-- Generation Time: Mar 06, 2023 at 12:58 AM
 -- Server version: 8.0.32-0ubuntu0.22.04.2
 -- PHP Version: 7.4.33
 
@@ -55,8 +55,7 @@ CREATE TABLE `institute_registration` (
 --
 
 INSERT INTO `institute_registration` (`id`, `institute_name`, `admin_name`, `admin_role`, `hod_contact`, `login_id`, `password`, `inst_reg_id`, `institute_email`, `institute_address`, `admin_profile_pic`, `community_status`, `account_status`, `account_type`, `supp`, `transaction_id`, `renewal_date`, `validity_upto`, `takeover_date`, `portal_registration_date`) VALUES
-(1, 'Zerbronics', 'Benq', 'super_admin', '+91-7445112316', 'ZERB03232316', 'RobinR2204#@', 'Enter Institute Registration Details', 'email@yourinstitute.com', 'Your Institute Address Here', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar6.png', 'Not Published', 'Running', 'Premium Account', 'To be updated', '', '', '', 'New Principal Joining Date', '2023-03-04 16:07:43'),
-(2, 'Asdf', 'Asdasd', 'super_admin', '+91-1798467461', 'ASDF03237461', 'Admin1234', 'Enter Institute Registration Details', 'email@yourinstitute.com', 'Your Institute Address Here', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar17.png', 'Not Published', 'Account_Suspended', 'Trial Account', 'To be updated', '', '', '', 'New Principal Joining Date', '2023-03-04 18:10:07');
+(1, 'Green Vila', 'Sinha', 'super_admin', '+91-8520147963', 'GREE03237963', 'Admin1234#@', 'Enter Institute Registration Details', 'email@yourinstitute.com', 'Your Institute Address Here', 'http://localhost/school_mgmt_system/modules/avatar/sample/avatar2.png', 'Not Published', 'Running', 'Trial Account', 'To be updated', 'Needs Update', 'Needs Update', 'Needs Update', 'New Principal Joining Date', '2023-03-05 21:57:12');
 
 --
 -- Indexes for dumped tables
@@ -76,7 +75,7 @@ ALTER TABLE `institute_registration`
 -- AUTO_INCREMENT for table `institute_registration`
 --
 ALTER TABLE `institute_registration`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
