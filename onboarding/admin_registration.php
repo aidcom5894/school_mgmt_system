@@ -102,9 +102,12 @@ if(isset($_POST['register']))
 	$accountStatus = "Running";
 	$accountType = "Trial Account";
 	$supp = "To be updated";
+	$transactionID = "Needs Update";
+	$renewalDate = "Needs Update";
+	$validityUpto = "Needs Update";
 	$takeoverDate = "New Principal Joining Date";
 
-	$insertData = "INSERT INTO institute_registration(institute_name,admin_name,admin_role,hod_contact,login_id,password,inst_reg_id,institute_email,institute_address,admin_profile_pic,community_status,account_status,account_type,supp,takeover_date) VALUES('$instName','$adminName','$admin_role','$adminContact','$instLoginId','$adminPassword','$instRegId','$instEmail','$instAddress','$userAvatar','$community_status','$accountStatus','$accountType','$supp','$takeoverDate')";
+	$insertData = "INSERT INTO institute_registration(institute_name,admin_name,admin_role,hod_contact,login_id,password,inst_reg_id,institute_email,institute_address,admin_profile_pic,community_status,account_status,account_type,supp,transaction_id, renewal_date, validity_upto, takeover_date) VALUES('$instName','$adminName','$admin_role','$adminContact','$instLoginId','$adminPassword','$instRegId','$instEmail','$instAddress','$userAvatar','$community_status','$accountStatus','$accountType','$supp','$transactionID','$renewalDate','$validityUpto','$takeoverDate')";
 
 	$checkName = mysqli_query($config,"SELECT institute_name FROM institute_registration WHERE institute_name='$instName'");
 
