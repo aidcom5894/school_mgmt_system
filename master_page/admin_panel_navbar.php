@@ -110,6 +110,15 @@ aria-expanded="false">
 	{
 		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').style.display = 'none';</script>";
 	}
+	else if($currentDate < $futureDate AND $accountType == "Trial Account")
+	{
+		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').innerHTML = 'Account Suspended';</script>";
+		mysqli_query($config,"UPDATE institute_registration SET account_status='Running' WHERE institute_name='{$_SESSION['instituteName']}'");
+		
+		echo '';
+
+	}
+
 	
 	else if($currentDate > $futureDate AND $accountType == "Trial Account")
 	{
