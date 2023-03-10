@@ -76,7 +76,7 @@ while($row = mysqli_fetch_assoc($fetchDetails))
 
 	$date1 = date('Y-m-d',strtotime($joiningDate));
 	$currentDate = date('Y-m-d');
-	$futureDate = date("Y-m-d", strtotime("$date1 + 3 days"));
+	$futureDate = date("Y-m-d", strtotime("$date1 + -1 days"));
 	// $deletionDate = date("Y-m-d", strtotime("$currentDate - 30 days"));
 
 	
@@ -109,17 +109,18 @@ aria-expanded="false">
 	if($accountType == "Premium Account" OR $currentDate < $futureDate AND $accountType == "Premium Account" OR $currentDate == $futureDate AND $accountType == "Premium Account" OR $currentDate > $futureDate AND $accountType == "Premium Account")
 	{
 		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').style.display = 'none';</script>";
+		mysqli_query($config,"UPDATE institute_registration SET account_status='Account Running' WHERE institute_name='{$_SESSION['instituteName']}'");
 	}
+
 	else if($currentDate < $futureDate AND $accountType == "Trial Account")
 	{
 		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').innerHTML = 'Account Suspended';</script>";
-		mysqli_query($config,"UPDATE institute_registration SET account_status='Running' WHERE institute_name='{$_SESSION['instituteName']}'");
+		mysqli_query($config,"UPDATE institute_registration SET account_status='Account Running' WHERE institute_name='{$_SESSION['instituteName']}'");
 		
 		echo '';
 
 	}
 
-	
 	else if($currentDate > $futureDate AND $accountType == "Trial Account")
 	{
 		echo "<script type='text/javascript'>document.getElementById('upgradeMsg').innerHTML = 'Account Suspended';</script>";
